@@ -1,0 +1,1 @@
+# puppet-essential-control-repo
