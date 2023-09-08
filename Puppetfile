@@ -1,1 +1,1 @@
-mod 'puppet/r10k', latest
+mod 'puppet/r10k', :latest
