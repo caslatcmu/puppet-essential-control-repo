@@ -21,6 +21,7 @@ node default {
     groups => 'wheel',
     password => Sensitive("puppet sucks"),
     purge_ssh_keys => true,
+    managehome => true,
   }
   group { 'username':
     ensure => present,
