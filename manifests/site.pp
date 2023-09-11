@@ -20,9 +20,16 @@ node default {
     gid => 1000,
     groups => 'wheel',
     password => Sensitive("puppet sucks"),
+    purge_ssh_keys => true,
   }
   group { 'username':
     ensure => present,
     gid => 1000,
+  }
+  ssh_authorized_key { 'casl@cmu-19gltq3':
+    ensure => present,
+    user => 'username',
+    type => 'ssh-ed25519',
+    key => 'AAAAC3NzaC1lZDI1NTE5AAAAIP70WPQM1LrxeeivxaDZdrXXrRUg9d+yWAe3tF4C1qhS',
   }
 }
