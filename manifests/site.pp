@@ -17,7 +17,7 @@ node default {
   user { 'username':
     ensure => present,
     uid => 1001,
-    gid => 1001,
+    gid => 1000,
     groups => 'wheel',
     password => Sensitive("puppet sucks"),
   }
