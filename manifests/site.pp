@@ -14,4 +14,15 @@ node default {
     mode => '0644',
     content => "This is a puppet-managed node!\n",
   }
+  user { 'username':
+    ensure => present,
+    uid => 1001,
+    gid => 1001,
+    groups => 'wheel',
+    password => Sensitive("puppet sucks"),
+  }
+  group { 'username':
+    ensure => present,
+    gid => 1000,
+  }
 }
